@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>JustStreamIt</title>
+    <meta name="description" content="classement des meilleur film">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js" async defer></script>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="#acceuil">Acceuil</a></li>
+        <li><a href="#cathegorie">Cathégories</a></li>
+
+      </ul>
+    </header>
+    <h1 class="nom">Just Stream It !</h1>
+    <div id="best" class="best_moovie_container">
+      <h1 class ="best_moovie_title">le film le mieux noter :</h1>
+      <h2 id="best_moovie_title" class = "best_moovie_title"></h2>
+      <a href="#" id="meilleur_film" class="img_best_moovie">
+          <img id="best_film" class="img_best_moovie" src="">
+      </a>
+  </div>
+
+  <div id ="carouselle_sept_meilleur" class="carousel">
+    <h1>sept meilleurs films</h1>
+    <div id="carousel1" class="carousel_content">
+    </div>
+
+  </div>
+
+  <div id ="carouselle_sept_meilleur" class="carousel">
+    <h1>sept meilleurs films d'action</h1>
+
+    <div id="carousel2" class="carousel_content">
+      
+    </div>
+
+  </div>
+
+  <div id ="carouselle_sept_meilleur" class="carousel">
+    <h1>sept meilleurs films de romance</h1>
+
+    <div id="carousel3" class="carousel_content">
+    </div>
+  </div>
+
+  <div id ="carouselle_sept_meilleur" class="carousel">
+    <h1>sept meilleurs films de science-fiction</h1>
+
+    <div id="carousel4" class="carousel_content">
+    </div>
+
+  </div>
+
+
+<!--fenétre modal-->
+
+  <div id="modal" class="modal">
+      <div id="modal_contenu" class="modal-content">
+        <span class="close">&times;</span>
+        <h3 id="titre"></h3>
+        <img id="img_modal" class="img_best_moovie" src="">
+        <p id="genre"></p>
+        <p id="date"></p>
+        <p id="note"></p>
+        <p id="score"></p>
+        <p id="real"></p>
+        <p id="acteurs"></p>
+        <p id="dure"></p>
+        <p id="pays"></p>
+        <p id="boxoffice"></p>
+        <p id="resumer"></p>
+      </div>
+    
+  </body>
+</html>

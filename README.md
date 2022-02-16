@@ -5,7 +5,7 @@ Projet consistant à créer une page HTML pour l'association JustStreamIt. Cette
 La page souhaitée par l'association affiche les catégories de films dans des caroussels, à la manière du site "Netlix". 
 
 L'interface doit comprendre les zones suivantes :
- - Un bloc "Meilleur film, affichant la jaquette du film, le résumé, ainsi qu'un bouton permettant d'afficher les différentes informations.
+ - Un bloc "Meilleur film, affichant la jaquette du film, un modal permettant d'afficher les différentes informations.
  - Un bloc "Films les mieux notés", affichant les jaquettes des 7 meilleurs films toutes catégories confondues. Des boutons doivent permettre de faire défiler les films de gauche à droite, et chaque clic sur une jaquette doit afficher les informations du film dans une fenêtre.
  - 3 autres blocs suivant le schéma du bloc "Films les mieux notés", les catégories etant au choix du développeur.
 

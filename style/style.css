@@ -2,178 +2,183 @@
 navbar
 */
 ul {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  list-style-type: none;
-  margin-bottom: 20px;
-  margin-top: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    list-style-type: none;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
 }
 
 li {
-  float: left;
+    float: left;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111;
+    background-color: #111;
 }
 
 /**
 le meilleur film
 */
-img:hover{
-  transform: scale(1.1);
+
+img:hover {
+    transform: scale(1.1);
 }
 
-body{
-  background-color: rgb(0, 0, 0);
+body {
+    background-color: #03bf4c;
 }
 
-h1{
-  color:rgb(219, 143, 81)!important;
-  font-size: 50px;
+h1 {
+    color: #ff2800;
+    font-size: 50px;
+    background-color: rgb(49, 48, 48);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.best_moovie_title{
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  color: rgb(55, 133, 48);
-  display: flex;
+.best_moovie_title {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    color: #ff2800;
+    display: flex;
 }
 
-.best_moovie_container{
-  padding: 30px;
-  border: solid;
-  border-color: rgb(39, 37, 37);
-  margin-bottom: 30px;
-  margin-top: 100px;
+.best_moovie_container {
+    padding: 30px;
+    border: solid;
+    background-color: rgb(49, 48, 48);
+    margin-bottom: 30px;
+    margin-top: 100px;
 }
 
-.img_best_moovie{
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  width:40%;
-  height:65%;
-  display: flex;
+.img_best_moovie {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    width: 40%;
+    height: 65%;
+    display: flex;
 }
 
-.nom{
-  text-align: center;
-  margin-top: 135px;
-  margin-bottom: 35px;
+.nom {
+    text-align: center;
+    margin-top: 135px;
+    margin-bottom: 35px;
 }
 
- /**
+/**
  fenétre modal
  */
 
 .modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(49, 48, 48);
 }
 
 .modal-content {
-  background-color: #817c7c;
-  margin: 15% auto; 
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; 
+    background-color: #f5821f;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-  
+
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
 }
-  
+
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-} 
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
- /**
+/**
  carousel
  */
 
-.carousel{
-  position: relative;
-  background-color: rgb(49, 48, 48);
-  overflow: hidden;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
+.carousel {
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(49, 48, 48);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.carousel h1{
-  text-align: center;
+.carousel h1 {
+    text-align: center;
 }
 
-.carousel_content::after{
-  content: '';
-  clear: both;
-  display: table;
+.carousel_content::after {
+    content: '';
+    clear: both;
+    display: table;
 }
 
-.item img{
-  display: inline;
-  width: 50%;
-  height: auto;
-  margin-left: 100px;
-  border-radius:30px;
-  box-shadow: 5px 7px 14px green;
+.item img {
+    display: inline;
+    width: 50%;
+    height: auto;
+    margin-left: 100px;
+    border-radius: 30px;
+    box-shadow: 5px 7px 14px green;
 }
 
-.item{
-  margin: 40px 10px;
-  float: left;
+.item {
+    margin: 40px 10px;
+    float: left;
 }
 
-.next, .prev{
-  display: flex;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background: #FFF url(right.svg) center center no-repeat;
-  background-size: 20px 20px;
-  border-radius: 50%;
-  top : 50%;
-  margin-top: -20px;
-  right: 0px;
-  cursor: pointer;
-  margin-right: 10px;
+.next,
+.prev {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFF url(right.svg) center center no-repeat;
+    background-size: 20px 20px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -20px;
+    right: 0px;
+    cursor: pointer;
+    margin-right: 10px;
 }
 
-.prev{
-  right: auto;
-  left: +20px;
-  background: #FFF url(left.svg) center center no-repeat;
+.prev {
+    right: auto;
+    left: +20px;
+    background: #FFF url(left.svg) center center no-repeat;
 }
 
-.next:hover,.prev:hover{
-  transform: scale(1.2);
+.next:hover,
+.prev:hover {
+    transform: scale(1.2);
 }

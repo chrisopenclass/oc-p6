@@ -13,7 +13,7 @@ function create_div(className) {
     let div = document.createElement('div')
     div.setAttribute('class', className)
     return div;
- };
+};
 // creation de la fenétre modal
 function construction_modal(url) {
     fetch(url)
@@ -53,9 +53,9 @@ function meilleur_film(url) {
         .then(function(res) {
             if (res.ok) {
                 return res.json();
-             }
-         })
-         .then(function(data) {
+            }
+        })
+        .then(function(data) {
             let meilleur_film = data.results[0]
             let url = meilleur_film.url
             let img = meilleur_film.image_url
@@ -76,16 +76,16 @@ function main() {
     carrousel(url_sept_meilleur_action, "carousel2");
     carrousel(url_sept_meilleur_romance, "carousel3");
     carrousel(url_meilleur_sci_fi, "carousel4");
- }
+}
 // fonction créant un carousell pour chaque films des cathérie selectionner 
 function carrousel(api_url, id) {
-     fetch(api_url)
-         .then(function(res) {
+    fetch(api_url)
+        .then(function(res) {
             if (res.ok) {
                 return res.json();
             }
         })
-         .then(function(data) {
+        .then(function(data) {
             let result = data.results;
             let ratio = result.length / 3;
             let caroussel = document.getElementById(id);
@@ -95,40 +95,40 @@ function carrousel(api_url, id) {
             let prev_button = create_div("prev")
             parent.appendChild(next_button)
             parent.appendChild(prev_button)
-            // pour chaque film  on crée une div dans laquel on ajout un élément image 
+                // pour chaque film  on crée une div dans laquel on ajout un élément image 
             result.forEach(elements => {
                 let url = elements.url
                 let item = create_div("item")
-                //on ajoute le lien de l'image dans l'élément on 
+                    //on ajoute le lien de l'image dans l'élément on 
                 item.innerHTML = "<img src='" + elements.image_url + "'>";
                 item.style.width = (100 / 4 / ratio) + "%"
                 caroussel.appendChild(item)
-                // pour chaque film on lance la fonction de création du modal le lien de la page du film en paramétre
+                    // pour chaque film on lance la fonction de création du modal le lien de la page du film en paramétre
                 item.addEventListener("click", function() {
                     construction_modal(url)
                 })
             })
             var current_item = 0
             var item_to_scroll = 1
-            //bouton du carousel permettant de scroll les items
-            next_button.addEventListener('click',function(){
+                //bouton du carousel permettant de scroll les items
+            next_button.addEventListener('click', function() {
                 // condition qui vérifie ou on en est dans le carousel si on est à la fin alors on retourne au début
-                if (current_item > (result.length - ratio) ){
+                if (current_item > (result.length - ratio)) {
                     current_item = -1
                 }
                 let i = current_item + item_to_scroll
                 let translateX = i * -100 / result.length
-                caroussel.style.transform = 'translate3d(' + translateX+'%, 0, 0)'
+                caroussel.style.transform = 'translate3d(' + translateX + '%, 0, 0)'
                 current_item = i
             })
-            prev_button.addEventListener('click',function(){
+            prev_button.addEventListener('click', function() {
                 // condition qui vérifie ou on en est dans le carousel si on est au début alors on va à la fin
-                if (current_item <= 0 ){
-                    current_item = parseInt(result.length - ratio) 
+                if (current_item <= 0) {
+                    current_item = parseInt(result.length - ratio)
                 }
                 let i = current_item - item_to_scroll
                 let translateX = i * -100 / result.length
-                caroussel.style.transform = 'translate3d(' + translateX+'%, 0, 0)'
+                caroussel.style.transform = 'translate3d(' + translateX + '%, 0, 0)'
                 current_item = i
             })
         })
